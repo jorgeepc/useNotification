@@ -1,0 +1,27 @@
+{
+  "parser": "@typescript-eslint/parser", // An ESLint custom parser which leverages TypeScript ESTree to allow for ESLint to lint TypeScript source code.
+  "extends": [
+    "eslint:recommended", // Recommended ruleset from eslint
+    "plugin:react/recommended", // Recommended ruleset from eslint-plugin-react
+    "plugin:@typescript-eslint/eslint-recommended", // Compatibility ruleset that disables rules from eslint:recommended which are already handled by @typescript-eslint
+    "plugin:@typescript-eslint/recommended", // Recommended ruleset from @typescript-eslint
+    "prettier", // Disable @typescript-eslint code formatting related rules
+    "prettier/@typescript-eslint" // Disable @typescript-eslint code formatting related rules
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/prop-types": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
