@@ -6,12 +6,15 @@
     "type": "git",
     "url": "https://github.com/jorgeepc/useNotification.git"
   },
-  "main": "dist/index.js",
   "author": "Jorge Padilla",
   "license": "MIT",
+  "source": "src/index.tsx",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
-    "build": "",
-    "dev": "",
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle watch --jsx React.createElement",
     "test": "",
     "format": "npm run prettier -- --write",
     "lint": "eslint --ext .ts,.tsx src",
@@ -25,16 +28,21 @@
   "devDependencies": {
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
-    "@typescript-eslint/eslint-plugin": "^2.3.0",
-    "@typescript-eslint/parser": "^2.3.0",
-    "eslint": "^6.4.0",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-react": "^7.14.3",
+    "@types/styled-components": "^4.1.19",
+    "@types/uuid": "^3.4.5",
     "husky": "^3.0.5",
     "lint-staged": "^9.3.0",
+    "microbundle": "^0.11.0",
     "prettier": "^1.18.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
     "typescript": "^3.6.3"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "react-spring": "^8.0.27",
+    "styled-components": "^4.4.0",
+    "uuid": "^3.3.3"
   }
 }
